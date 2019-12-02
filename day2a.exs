@@ -1,7 +1,7 @@
 defmodule Day2 do
   def loadData() do
     {:ok, file} = File.open("input_day2.txt", [:read])
-    IO.read(file, :all)
+    IO.read(file, :all) |> data()
   end
 
   def data(input) do
@@ -53,4 +53,4 @@ defmodule Day2 do
 
 end
 
-IO.puts Day2.data(Day2.loadData())
+Day2.loadData()
